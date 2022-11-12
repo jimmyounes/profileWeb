@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Great+Vibes&family=Noto+Nastaliq+Urdu&family=Playfair+Display&display=swap" rel="stylesheet">
+   
+   <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 5000);
+      </script>
+  
+ 
+  <style>
+    #photoid{  
+  border-radius: 50%;
+  width:30%;
+  margin-left: 60%;
+    margin-top: 10%;
+    }
+
+    .Accueil{
+        width:100%;
+        height: 600px;
+        background: #F9E4B7;
+        display: block;
+    }
+    .apropos{
+        width: 100%;
+        background-image: url('/images/14622.jpg') no-repeat center center fixed;
+       
+        display: block;
+        background:white;
+        
+    }
+    .presentation {
+        margin-top: -25%;
+        margin-left:16%;
+    }
+    .presentation h1{
+        color:white;
+       
+       font-size: 180%;
+    }
+    .presentation h2{
+        color: #72A0C1;
+        font-size: 270%;
+    }
+    #mail{
+        color:white;
+        font-size: 130%;
+    }
+    #photoministre{
+        margin-top: 5%;
+       margin-left: 5%;
+        width:50%;
+        height: 50%;
+    }
+   .description{
+    margin-left: 70%;
+    margin-top: -35%;
+  background: white;
+  margin-right: 5%;
+   }
+#wd{
+    background: white;
+    background-size: 50%;
+    margin-left: 55%;
+    margin-right: 30%;
+    margin-top: 0;
+    border-radius: 5px;
+}
+#wr{
+    background: white;
+    background-size: 50%;
+    margin-left: 70%;
+    margin-right: 13%;
+    margin-top: 0;
+    border-radius: 5px;
+}
+#dr{
+    background: white;
+    background-size: 50%;
+    margin-left: 87%;
+    margin-top: -20%;
+    margin-top: 0;
+    border-radius: 5px;
+}
+.cequejefais{
+  width:100%;
+  height:100%;
+
+  border-radius: 10px;
+  margin-top: -2%;
+
+  
+}
+.cequejefais h1 {
+  margin-left: 40%;
+  color:white;
+  font-family:"Bungee Shades","Great Vibes ","Noto Nastaliq Urdu" ,"Playfaire Display" ;
+ 
+  font-size: 270%;
+ 
+}
+.benevolat h1{
+  margin-left: 40%;
+  color:white;
+  font-family:"Bungee Shades","Great Vibes ","Noto Nastaliq Urdu" ,"Playfaire Display" ;
+ 
+  font-size: 270%;
+}
+.contact h1{
+  margin-left: 40%;
+  color:white;
+  font-family:"Bungee Shades","Great Vibes ","Noto Nastaliq Urdu" ,"Playfaire Display" ;
+ 
+  font-size: 270%;
+}
+.formation h1 {
+  margin-left: 40%;
+  color:white;
+  font-family:"Bungee Shades","Great Vibes ","Noto Nastaliq Urdu" ,"Playfaire Display" ;
+ 
+  font-size: 270%;
+}
+
+.cardsc{
+  display:flex;
+  margin-top: 3%;
+}
+.cardsf{
+  display: flex;
+
+}
+.portfolio {
+  width: 100%;
+  height:2000px;
+  background: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.portfolio h1{
+  color: white;
+ 
+  font-family:"Bungee Shades","Great Vibes ","Noto Nastaliq Urdu" ,"Playfaire Display" ;
+
+  font-size: 270%;
+  
+}
+#contac{
+  color: black;
+  margin-left: 40%;
+ font-family:"Bungee Shades","Great Vibes ","Noto Nastaliq Urdu" ,"Playfaire Display" ;
+
+ font-size: 270%;
+
+}
+
+
+.slider{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: white;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+#radio5:checked ~ .first{
+  margin-left: -80%;
+}
+#radio6:checked ~ .first{
+  margin-left: -100%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: white;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: white;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: white;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: white;
+}
+#radio5:checked ~ .navigation-auto .auto-btn5{
+  background: white;
+}    
+#radio6:checked ~ .navigation-auto .auto-btn6{
+  background: white;
+}
+#givingb{
+ margin-top: -10%;
+}
+  </style>
+
+</head>
+
+<body>
+    {{> header}}
+    
+     <section id="accueil"class="Accueil" >   
+     <div class="acc">
+        <div class="climage">
+        <img id="photoid" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t39.30808-6/250228341_5039117912783569_4044426012664842215_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=DD7XQGyMySwAX8pwXYq&_nc_ht=scontent-cdt1-1.xx&oh=00_AfC6-iVkf01rYCB7F9juT23Mau80NA5Q0uMWvUajLeFpvQ&oe=63702C38" alt="Avatar">
+        </div>
+     </div>
+     <div class="presentation">
+        <h1>Bonjour je suis, </h1>
+        <h2>Younes Ait Kettout </h2>
+        <h2>Etudiant en IOT et Big Data </h2>
+      
+            <h5 id="mail"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" >
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+              </svg><span></span>Younesaitkettou@gmail.com</h5>
+            <h5><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg> +33749582202</h5>
+        
+     </div>
+     </section>
+    
+     <section id="apropos" class="apropos" style="background-color: #B9D9EB;"  class="border border-primary">
+      
+          <div class="photoavecministre">
+            <img id="photoministre"src ="https://scontent-cdt1-1.xx.fbcdn.net/v/t39.30808-6/241675043_4886243218071040_8356975284989563486_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=7Rx0p1z2PqYAX-NnUh6&_nc_ht=scontent-cdt1-1.xx&oh=00_AfDJv529nudCzrAhwEPAPKvYxvuIj9wIcS3mr1kCP6AgWw&oe=636ED332"> 
+          </div>
+          <div class="description">
+            <h2>À propos de moi </h2>
+            <p>
+                bonjour , je suis titulaire d'une licence informatique à l'université d'Aix Marseille ,et actuellement en Master 1 informatique en paroucrs IOT à l'unversité de Paris Saclay.Passioné par L'IOT et le Big data, convaincu que ces deux sciences  vont changer le monde de l'industrie et mener à bien notre transaction environnementale.j'ai acquis lors de ma formation des compétences en traitement et analyse de donées,et maitriser un ensemble de concepts sur les technologies mobiles telle que la 5G,l'Edge Computing, le Cloud, le Big Data, l’Intelligence Artificielle (IA) et la Blockchain.
+                je suis également compétent en 
+            </p>
+           
+          </div>
+          <div class="supp">
+            <ul>
+                <li id="wd">Développement Web</li>
+                <li id="wr">Dev logiciel et Réseau </li>
+                <li id="dr">Développement et recherche </li>
+            </ul>
+          </div>
+     </section>
+    <section class="cequejefais "   style="background-color: #F9E4B7 ;" >
+
+      
+      <h1 >Ce que je fais </h1>
+      <div class="cardsc" >
+
+        <div class="card" style="border-radius:40px;margin-left:10%;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; background: #317873">
+          <img  style="width:30%;height: 5%;" class="card-img-top" alt="Card image cap" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/512/external-developer-mobile-app-development-flaticons-lineal-color-flat-icons-2.png">
+          <div class="card-body">
+            <h3 style="color:white">Développement Web</h3>
+            <ul style="color: white;">
+              <li>♠ Création, montée en version et maintenance de sites Web • FrontEnd • BackEnd. </li>
+              <li>♠ Support • Conseil • Graphisme • Hébergement & configuration serveur.</li>
+            </ul>
+          </div>
+        </div>       
+        
+        <div class="card" style="border-radius: 40px;margin-left:10%;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; background: #317873;">
+          <img  style="width:30%;height:20%;" class="card-img-top" alt="Card image cap" src="https://img.icons8.com/external-ddara-lineal-color-ddara/512/external-developer-business-elements-ddara-lineal-color-ddara.png">
+          <div class="card-body">
+            <h3 style="color:white;">Développement d'applications</h3>
+            <ul style="color:white">
+              <li>♠ Comprendre les besoins du client, en intégrant ses contraintes, afin de rédiger un cahier des charges </li>
+              <li>♠ Réaliser la modélisation : UML, Diagramme.</li>
+              <li>♠Réaliser la technique de conception : Java, JavaFx, Design Pattern, SOLID Principles, MVC.</li>
+              <li>♠ Effectuer les tests et traiter les modifications demandées par les utilisateurs, au fil du temps.</li>
+            </ul>
+          </div>
+        </div> 
+
+        <div class="card" style="border-radius: 40px;margin-left:10%;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; background: #317873">
+          <img  style="height:20%;width:30%;" class="card-img-top" alt="Card image cap" src="https://img.icons8.com/ultraviolet/512/database.png">
+          <div class="card-body">
+            <h3 style="color:white">Analyse et traitement des données </h3>
+            <ul style="color:white;">
+              <li>♠ exploiter et interpréter les données pour en dégager des observations utiles </li>
+              <li>♠ transformer les données brutes en données expoitable pour le traitement en machine  </li>
+              <li>♠Analyser les données afin de définir le modèle de ML le plus approprié </li>
+              <li>♠ Entrainer et tester  un modele de Machine learning sur un ensemble de données .</li>
+              
+            </ul>
+          </div>
+        </div> 
+
+        
+     
+        </div>
+
+      
+
+    </section>
+
+<section id="portfolio" class="portfolio" style=" background-color: #B9D9EB;"  >
+ <h1>Projets realisés</h1>
+  <div class="slider">
+    <div class="slides">
+      <!--radio buttons start-->
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+      <input type="radio" name="radio-btn" id="radio5">
+      <input type="radio" name="radio-btn" id="radio6">
+      <!--radio buttons end-->
+      <!--slide images start-->
+
+      <div class="slide first">
+      
+        <img src="/images/classifyMer.jpeg" >
+
+      </div>
+      <div class="slide">
+        <img src="/images/giveyourblood.jpeg" >
+      </div>
+      <div class="slide">
+        <img src="/images/classifyreviews.jpeg" >
+      </div>
+      <div class="slide">
+        <img src="/images/appmeteo.jpeg" alt="">
+      </div>
+      <div class="slide">
+        <img src="/images/foundYourTihngs.jpeg" alt="">
+      </div>
+      <div class="slide">
+        <img src="/images/dungeon.jpeg" alt="">
+      </div>
+      <!--slide images end-->
+      <!--automatic navigation start-->
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+        <div class="auto-btn5"></div>
+        <div class="auto-btn6"></div>
+      </div>
+      <!--automatic navigation end-->
+    </div>
+    <!--manual navigation start-->
+    <div class="navigation-manual">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
+      <label for="radio5" class="manual-btn"></label>
+      <label for="radio6" class="manual-btn"></label>
+    </div>
+    <!--manual navigation end-->
+  </div>
+  <!--image slider end-->
+
+</section>
+<section id="formation" class="formation" style="background-color:#F9E4B7;">
+  <h1>Formation</h1>
+  <div class="cardsf"  >
+
+    <div class="card" style="background-color: #317873;margin-left:15%;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ">
+      <img  style="width:80%;height: 10%;border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Card image cap" src="https://www.universite-paris-saclay.fr/sites/default/files/media/2019-12/logo-ups.svg">
+      <div class="card-body">
+        <h3 style="color:white">Master informatique Parcours Internet of Things</h3>
+        <h4 style="color: white;">2022-2024</h4>
+        <ul style="color: white;">
+          <li>● réseaux mobiles et sans fil   ; </li>
+          <li>Programmation réseau </li>
+          <li>● Calcul haute performance; </li>
+          <li>● Optimisation dans les graphes  ; </li>
+          <li>● Optimisation discrète non linéaire ; </li>
+          <li>● Programmation MPI;</li>
+          <li>● Virtualisation et Cloud;</li>
+          <li>● Test fonctionnel;</li>
+          <li>● Bases de données transaction  ; </li>
+          <li>● programmation c++ ; </li>
+          <li>● large Scale distrubed data processing</li>
+          <li>● apprentissage et optimisation des systemes</li>
+          <li>● Machine learning </li>
+        </ul>
+      </div>
+    </div>     
+    <div style="margin-left:20%;">  
+    <div class="card" style=" background-color: #317873;margin-left:10%;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ">
+      <img  style="width:100%;height: 20%;border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Card image cap" src="https://upload.wikimedia.org/wikipedia/fr/d/d4/Aix-Marseille_Universit%C3%A9_%28Logo%29.svg">
+      <div class="card-body">
+        <h3 style="color:white">Licence informatique </h3>
+        <h4 style="color: white;">2019-2022</h4>
+        <ul style="color: white;">
+          <li>● Algorithmes (Complexité, Tri, Graphe, Réseaux) ;</li>
+          <li>● Programmation (C , Java, Shell) ;</li>
+          <li>● Langages formels ● Architecture des ordinateurs (Mips, X86, Circuits)</li>
+          <li>● Systèmes d'exploitation (Linux, Gestion de Memoire et Fichier)</li>
+          <li>● Administration Réseaux (Cisco, Programmation Socket)  </li>
+          <li>● Théorie des graphes.</li>
+        </ul>
+      </div>
+    </div>     
+  </div>
+
+    
+ 
+    </div>
+
+<h1>compétences</h1>
+<div class="cardsf"  >
+
+  <div class="card" style="background-color: #317873;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ">
+    <img  style="width:50%;height: 5%;border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Card image cap" src="https://cms-informatic.com/wp-content/uploads/2020/01/logo-langage-C-300x300.png">
+    <div class="card-body">
+      <h3 style="color:white">C</h3>
+   
+    </div>
+  </div>     
+  
+  <div class="card" style=" margin-left: -10%;background-color: #317873;height:80%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ">
+    <img  style="width:45%;height: 50%;border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Card image cap" src="https://cms-informatic.com/wp-content/uploads/2020/01/logo-langage-c.jpg">
+    <div class="card-body">
+      <h3 style="color:white">C++ </h3>
+    </div>
+  </div>     
+  <div class="card" style="margin-left: -10%;background-color: #317873;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ">
+    <img  style="width:80%;height: 60%;border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Card image cap" src="https://logos-marques.com/wp-content/uploads/2021/03/Java-Logo.png">
+    <div class="card-body">
+      <h3 style="color:white">Java </h3>
+    </div>
+  </div>  
+  <div class="card" style="margin-left: -10%;background-color: #317873;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ">
+    <img  style="width:80%;height: 60%;border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Card image cap" src="https://logo-marque.com/wp-content/uploads/2021/10/Python-Logo.png">
+    <div class="card-body">
+      <h3 style="color:white">Python </h3>
+    </div>
+  </div>  
+  <div class="card" style="margin-left: -10%;background-color: #317873;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ">
+    <img  style="width:40%;height: 20%;border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Card image cap" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
+    <div class="card-body">
+      <h3 style="color:white">javascript </h3>
+    </div>
+  </div>
+  <div class="card" style="margin-left: -10%;background-color: #317873;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ">
+    <img  style="width:60%;height: 60%;border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Card image cap" src="https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg">
+    <div class="card-body">
+      <h3 style="color:white">SQL</h3>
+    </div>
+  </div>
+  <div class="card" style="margin-left: -10%;background-color: #317873;height:100%;width: 18rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ">
+    <img  style="width:20%;height: 40%;border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Card image cap" src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png">
+    <div class="card-body">
+      <h3 style="color:white">HTML </h3>
+    </div>
+  </div>
+  <div class="card" style="margin-left: -10%;background-color: #317873;height:100%;width: 10rem;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ">
+    <img  style="width:20%;height: 60%;border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Card image cap" src="https://armyyazilim.com/wp-content/uploads/2019/10/css.png">
+    <div class="card-body">
+      <h3 style="color:white">CSS </h3>
+    </div>
+  </div>
+  </div>
+<section  class="benevolat"  style="background-color: #B9D9EB;">
+  <h1>bénévolat </h1>
+  <section class=" display: flex;">
+     
+     <div style="margin-top: 20%;margin-left: 10%;width: 20%; background:white;">
+       Pendant deux ans j'ai pu etre bénévole au sein de l'association de l'AFEV auquelle j'ai été engagé sur des actions solidaires et paritciper à l'éveil culturel auprés d'enfants du quartiers grace à l'accompagnement individuel et l'animation d'ateliers au Théatre de l'oeuvre .
+     </div>
+
+     
+      <img src="/images/benevole.jpg" style="margin-top: -35%;margin-left:65%;height:5% ; width: 20%;">
+    
+  </section>
+</section>
+
+<section  id="contact" class="contact" style="background: #72A0C1; height: 750px;">
+<h1 >Contactez moi </h1>
+<form action="https://formsubmit.co/younesaitkettou@gmail.com" method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-6" style="margin-left:30% ;">
+      <label for="inputEmail4" style="color:white ;">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+  
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6" style="margin-left:30% ;margin-top: 3%;">
+      
+      <input type="text" class="form-control" id="inputEmail4" placeholder="Nom ">
+    </div>
+  
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6" style="margin-left:30% ;margin-top: 3%;">
+      
+      <input type="text" class="form-control" id="inputEmail4" placeholder="Sujet">
+    </div>
+  
+  </div>
+
+  <div class="form-group" style="margin-left: 30%;margin-right: 30%;">
+    <label for="exampleFormControlTextarea1" style="color: white;">Votre message</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary" style="margin-left: 40%; width: 10%;height: 20%;margin-top: 2%;">Envoyer </button>
+</form>
+<a href="https://www.linkedin.com/in/younes-ait-kettout-0b1a09224/"><img style="height: 10%;margin-top: 2%;margin-left: 30%;"src="https://img.icons8.com/doodle/512/linkedin--v2.png"></a>
+<a href="https://etulab.univ-amu.fr/a20028891"><img src="https://img.icons8.com/color/512/gitlab.png" style="height: 10%;margin-top: 2%;margin-left: 5%;" ></a>
+<a><img src="https://img.icons8.com/3d-plastilina/512/instagram-new.png" style="height: 10%;margin-top: 2%;margin-left: 5%;"></a>
+</section>
+</body>
+
+</html>
+
+
+
+
+
